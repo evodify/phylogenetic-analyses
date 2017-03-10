@@ -1,6 +1,6 @@
 # GSI calculation
 
-The script [GSI.py](https://github.com/evodify/python_homework/blob/master/advanced_part/GSI.py) calculates genealogical sorting index (GSI) for a given group/groups on trees from the multi-tree newick file. It iterates through all the trees in a file and outputs GSIs for each tree as well as it summarizes the results with a histogram.
+The script [GSI.py](https://github.com/evodify/python_homework/blob/master/advanced_part/GSI.py) calculates the genealogical sorting index (GSI) for a given group/groups on trees from the multi-tree newick file. It iterates through all the trees in a file and outputs GSIs for each tree as well as it summarizes the results with a histogram.
 
 Summarizing the variation in the phylogenetic signal along the genome is problematic due to  a large set of trees with varying topology. Often the results of phylogenetic sliding window analysis is visualized with [DensiTree](https://www.cs.auckland.ac.nz/~remco/DensiTree/) :
 
