@@ -41,7 +41,7 @@ tree3   0.5625  0.125
 Distribution of GSI (tree.out.pdf):
 
 
-![alt tag] (https://github.com/evodify/python_homework/blob/master/advanced_part/example_data/tree.out.png)
+![alt tag](tree.out.png)
 
 **Command example:**
 ```
