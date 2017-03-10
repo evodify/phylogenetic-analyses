@@ -50,6 +50,6 @@ python2 GSI.py -t tree.nwk -o tree.out -g "gr1[a1,a2,a3,a4];gr2[b1,b2,b3,b4]" -c
 To see all possible option, run python script with --help option: `python script.py --help`
 
 # To do:
-1. Fix x-axis shift bug.
-2. Implement filter by bootstrap values: (ete2: TreeNode.support)
-3. Set root on fly (ete2: TreeNode.set_outgroup)
+1. Fix the x-axis shift bug.
+2. Implement filtering by bootstrap values: (ete2: TreeNode.support)
+3. Enable setting root on fly (ete2: TreeNode.set_outgroup)
