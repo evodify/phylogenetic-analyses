@@ -19,6 +19,7 @@ Phylogenetic trees in a multi-newick file (tree.nwk):
 ((((a1,a2),(a3,a4)),((b1,b2),b3)),b4);
 (((a1,a2),(a3,a4)),((b1,b2),(b3,b4)));
 ((((a1,a2),(b3,a4)),a3),((b1,b2),b4));
+((((a1,a2),(a3,a4)),((b1,b2),b3)),b4);
 ```
 
 Tree names/coordinates on the genome (tree.names):
@@ -26,17 +27,26 @@ Tree names/coordinates on the genome (tree.names):
 tree1
 tree2
 tree3
+tree4
 ```
 
 **Output files example:**
 
-GSI for every tree and group (tree.out):
+GSI for every tree and group (GSI_tree.out):
 ```
 TreeName    gr1 gr2
 tree1   1.0 0.5625
 tree2   1.0 1.0
 tree3   0.5625  0.125
+tree4   1.0 0.5625
 ```
+GSI Total (GSI_T_tree.out)::
+```
+Group   GSI_T   p
+gr1 0.890625    0.014000
+gr2 0.562500    0.024000
+```
+
 Distribution of GSI (tree.out.png):
 
 ![alt tag](tree.out.png)
@@ -45,11 +55,13 @@ Distribution of GSI (tree.out.png):
 
 **Command example:**
 ```
-python2 GSI.py -t tree.nwk -o tree.out -g "gr1[a1,a2,a3,a4];gr2[b1,b2,b3,b4]" -c tree.names
+python2 GSI.py -t tree.nwk -o tree.out -g "gr1[a1,a2,a3,a4];gr2[b1,b2,b3,b4]" -c tree.names -p 100
 ```
 To see all possible option, run python script with --help option: `python script.py --help`
 
-# To do:
+# Thing to improve:
 1. Fix the x-axis shift bug.
-2. Implement filtering by bootstrap values: (ete2: TreeNode.support)
-3. Enable setting root on fly (ete2: TreeNode.set_outgroup)
+2. Re-write the solution for polytomies. It uses ete2.resolve_polytomy now. This is not correct way.
+3. Implement tree filtering by bootstrap values: (ete2: TreeNode.support).
+4. Enable setting root on fly (ete2: TreeNode.set_outgroup).
+5. Speed-up by improving the search for unique topologies.
