@@ -3,3 +3,5 @@
 This repository contains scripts to perform various phylogenetic analyses on genomic data
 
 [GSI](GSI) folder contains a script to calculate the genealogical sorting index (GSI).
+
+[R](R) folder contains R scripts to perform various phylogenetic analyses on genomic data.
