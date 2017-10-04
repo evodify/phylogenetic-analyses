@@ -51,13 +51,13 @@ import random
 
 ############################# options #############################
 
-class MyParser(argparse.ArgumentParser): 
+class CommandLineParser(argparse.ArgumentParser): 
    def error(self, message):
       sys.stderr.write('error: %s\n' % message)
       self.print_help()
       sys.exit(2)
 
-parser = MyParser()
+parser = CommandLineParser()
 parser.add_argument('-t', '--tree', help = 'file containing trees in newick format', type=str, required=True)
 parser.add_argument('-c', '--coordinates', help = 'file indicating trees\' position on the genome', type=str, required=True)
 parser.add_argument('-o', '--output', help = 'output name', type=str, required=True)
